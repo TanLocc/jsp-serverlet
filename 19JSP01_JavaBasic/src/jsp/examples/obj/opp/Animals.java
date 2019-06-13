@@ -1,40 +1,38 @@
 /**
  * 
  */
-package jsp.examples.obj;
+package jsp.examples.obj.opp;
 
 /**
  * @author ndloc
  *
  */
-public class Student {
+public class Animals {
 	private String name;
 	private int age;
-	private String gender;
 	
-	public Student(String name, int age, String gender) {
-		super();
+	public Animals(String name, int age) {
 		this.name = name;
 		this.age = age;
-		this.gender = gender;
 	}
+	
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public int getAge() {
 		return age;
 	}
+
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public String getGender() {
-		return gender;
-	}
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
 
+	public void move() {
+		System.out.println("Animals can move");
+	}
 }
