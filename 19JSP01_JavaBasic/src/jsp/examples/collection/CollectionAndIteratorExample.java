@@ -51,5 +51,5 @@ public class CollectionAndIteratorExample {
             String value = listIterator.next();
             System.out.println("value:" + value);
         }
-    }
+	}
 }

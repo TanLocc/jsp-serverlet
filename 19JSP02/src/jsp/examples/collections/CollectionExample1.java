@@ -51,5 +51,5 @@ public class CollectionExample1 {
         hashMap.put("Language1", ".Net");
         System.out.println("Các phần tử của Map");
         System.out.print("\t" + hashMap);
-    }
+	}
 }
