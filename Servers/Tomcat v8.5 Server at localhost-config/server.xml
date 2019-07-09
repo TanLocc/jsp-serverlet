@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Servlet Tutorial1" path="/Servlet_Tutorial1" reloadable="true" source="org.eclipse.jst.jee.server:Servlet Tutorial1"/><Context docBase="LoginWebMVCDemo" path="/LoginWebMVCDemo" reloadable="true" source="org.eclipse.jst.jee.server:LoginWebMVCDemo"/><Context docBase="SimpleWebApp" path="/SimpleWebApp" reloadable="true" source="org.eclipse.jst.jee.server:SimpleWebApp"/><Context docBase="UpdateFile" path="/UpdateFile" reloadable="true" source="org.eclipse.jst.jee.server:UpdateFile"/></Host>
+      <Context docBase="Servlet Tutorial1" path="/Servlet_Tutorial1" reloadable="true" source="org.eclipse.jst.jee.server:Servlet Tutorial1"/><Context docBase="LoginWebMVCDemo" path="/LoginWebMVCDemo" reloadable="true" source="org.eclipse.jst.jee.server:LoginWebMVCDemo"/><Context docBase="SimpleWebApp" path="/SimpleWebApp" reloadable="true" source="org.eclipse.jst.jee.server:SimpleWebApp"/><Context docBase="UpdateFile" path="/UpdateFile" reloadable="true" source="org.eclipse.jst.jee.server:UpdateFile"/><Context docBase="UpFileFromDB" path="/UpFileFromDB" reloadable="true" source="org.eclipse.jst.jee.server:UpFileFromDB"/><Context docBase="ImageFromDataBase" path="/ImageFromDataBase" reloadable="true" source="org.eclipse.jst.jee.server:ImageFromDataBase"/></Host>
     </Engine>
   </Service>
 </Server>

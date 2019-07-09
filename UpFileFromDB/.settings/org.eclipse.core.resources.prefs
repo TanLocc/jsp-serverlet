@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/upFile/ConnectionUtils.java=UTF-8
+encoding//src/upFile/DownloadAttachmentServlet.java=UTF-8
+encoding//src/upFile/MySQLConnUtils.java=UTF-8
+encoding//src/upFile/UpdateImageToDB.java=UTF-8
+encoding//src/upFile/UploadToDBServlet.java=UTF-8

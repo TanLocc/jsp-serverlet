@@ -60,7 +60,7 @@ public class Customer {
 	}
 	public static Connection getMyConnection() throws ClassNotFoundException, SQLException{
 		String hostName = "localhost"	;
-		String dbName = "demo1";
+		String dbName   = "demo1";
 		String userName = "root";
 		String password = "941997";
 		return getMyConnection(hostName, dbName, userName, password) ;

@@ -9,16 +9,6 @@ import java.util.List;
 import java.util.Scanner;
 
 
-
-
-
-
-
-
-
-
-
-
 public class CustomerDAOImpl implements ICustumer {
 
 	public void AddCustomer(Customer customer,Statement statement ) throws ClassNotFoundException, SQLException {
@@ -116,7 +106,7 @@ public class CustomerDAOImpl implements ICustumer {
 		CustomerDAOImpl obj = new CustomerDAOImpl();  
 		Connection connection = Customer.getMyConnection();
 		Statement statement = connection.createStatement();
-		Customer customer = new Customer(0, "AN", 0, null, 0, 0);
+		Customer customer = new Customer(0, "AN2", 0, null, 0, 0);
 		//obj.AddCustomer(customer, statement);
         //obj.DeleteCustomerByName(customer.name, statement);
 		obj.UpdateCustomerByName(customer.name, statement);
