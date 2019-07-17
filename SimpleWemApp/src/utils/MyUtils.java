@@ -50,6 +50,7 @@ public class MyUtils {
         // 1 ngày (Đã đổi ra giây)
         cookieUserName.setMaxAge(24 * 60 * 60);
         response.addCookie(cookieUserName);
+      
     }
  
     public static String getUserNameInCookie(HttpServletRequest request) {

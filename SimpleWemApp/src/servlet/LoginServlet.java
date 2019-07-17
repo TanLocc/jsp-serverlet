@@ -29,7 +29,7 @@ public class LoginServlet extends HttpServlet {
     // Hiển thị trang Login.
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException,  IOException {
  
         // Forward tới trang /WEB-INF/views/loginView.jsp
         // (Người dùng không thể truy cập trực tiếp

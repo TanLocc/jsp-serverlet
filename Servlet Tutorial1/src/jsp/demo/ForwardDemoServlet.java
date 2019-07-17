@@ -33,7 +33,7 @@ public class ForwardDemoServlet extends HttpServlet {
                     "Hi, I'm loc come from Quang Nam !");
  
             RequestDispatcher dispatcher //
-                    = request.getServletContext().getRequestDispatcher("/Show");
+                    = request.getServletContext().getRequestDispatcher("/WebContent/WEB-INF/index.jsp");
             dispatcher.forward(request, response);
  
             return;
