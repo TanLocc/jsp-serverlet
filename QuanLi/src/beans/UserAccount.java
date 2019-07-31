@@ -1,13 +1,16 @@
 package beans;
 
+import java.io.InputStream;
+
 public class UserAccount {
 	 
 	  
-	 private float id; 
+	 private int id; 
 	   private String userName;
 	   private String mail;
 	   private String password;
 	   private int role;
+	   private InputStream avatar;
 	    
 	 
 	   public UserAccount() {
@@ -16,10 +19,11 @@ public class UserAccount {
 	    
 	
 
-	public UserAccount(float id, String userName, String mail, String password, int role) {
+	public UserAccount(int id, String userName, InputStream avatar, String mail, String password, int role) {
 		super();
 		this.id = id;
 		this.userName = userName;
+		this.avatar = avatar;
 		this.mail = mail;
 		this.password = password;
 		this.role = role;
@@ -27,13 +31,13 @@ public class UserAccount {
 
 
 
-	public float getId() {
+	public int getId() {
 		return id;
 	}
 
 
 
-	public void setId(float id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -86,6 +90,18 @@ public class UserAccount {
 	}
 
 
+
+	public InputStream getAvatar() {
+		return avatar;
+	}
+
+
+
+	public void setAvatar(InputStream avatar) {
+		this.avatar = avatar;
+	}
+
+    
 
 	
 	 

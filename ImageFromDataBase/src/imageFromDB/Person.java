@@ -2,7 +2,7 @@ package imageFromDB;
 
 public class Person {
 	 
-    private Long id;
+    private long id;
     private String name;
     private byte[] imageData;
     private String imageFileName;
@@ -11,18 +11,18 @@ public class Person {
  
     }
  
-    public Person(Long id, String name, String imageFileName, byte[] imageData) {
+    public Person(long id, String name, String imageFileName, byte[] imageData) {
         this.id = id;
         this.name = name;
         this.imageData = imageData;
         this.imageFileName = imageFileName;
     }
  
-    public Long getId() {
+    public long getId() {
         return id;
     }
  
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
  

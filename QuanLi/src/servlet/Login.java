@@ -14,7 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.HttpSession;
 
 import beans.UserAccount;
 import conn.ConnectionUtils;
@@ -70,6 +70,8 @@ public class Login extends HttpServlet {
 	        conn = ConnectionUtils.getConnection();
 	        user = UserDao.findUser(conn, userName, password);
 	        request.setAttribute("user", user);
+	        HttpSession session = request.getSession();
+	        session.setAttribute("username", user.getUserName());
 	        if (user == null) {
                 hasError = true;
                 errorString = "User Name or password invalid";
@@ -109,7 +111,7 @@ public class Login extends HttpServlet {
 	                dispatcher.forward(request, response);	
 	        	}
 	        	else {
-	        		RequestDispatcher dispatcher  = this.getServletContext().getRequestDispatcher("/WEB-INF/views/Startbookstrap.jsp");
+	        		RequestDispatcher dispatcher  = this.getServletContext().getRequestDispatcher("/UserView");
                  dispatcher.forward(request, response);
 	        }}
 }}

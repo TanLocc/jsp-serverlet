@@ -56,7 +56,7 @@ public class UserList extends HttpServlet {
 		}
 		request.setAttribute("errorString", errorString);
         request.setAttribute("userList", list);
-		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/Admin.jsp");
+		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/UserList.jsp");
         dispatcher.forward(request, response);
 	}
 

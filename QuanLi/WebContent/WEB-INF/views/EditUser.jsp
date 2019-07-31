@@ -10,19 +10,21 @@
       <title>Edit User</title>
    </head>
    <body>
- 
-     
- 
       <h3>Edit User</h3>
  
       <p style="color: red;">${errorString}</p>
  
       <c:if test="${not empty user}">
          <div align="center"> 
-<form method="POST" action="${pageContext.request.contextPath}/EditUser" accept-charset="utf-8" class="form-group" style="width:600px;margin: 0px auto;" id="formDemo">
-            <input type="hidden" name="id" value="${user.id}" />
+<form method="POST" enctype="multipart/form-data" action="${pageContext.request.contextPath}/EditUser" accept-charset="utf-8" class="form-group" style="width:600px;margin: 0px auto;" id="formDemo">
+            
             <div class = "col-4" align="left" >
-                  <span style="color:red;">Id:</span><span>${user.id}</span>
+                  
+              <div >
+				<label for="avatar">Avatar</label>
+				<input  name="avatar" id="avatar" type="file" class="form-control" placeholder="Vui lòng chọn ảnh" >
+			  </div>
+			  <input type="hidden" name="id" value="${user.id}" />   
                <div>
                <label  for="username">Username:</label>
               <input name="username" type="text" id = "username" class="form-control" value="${user.userName}" required>

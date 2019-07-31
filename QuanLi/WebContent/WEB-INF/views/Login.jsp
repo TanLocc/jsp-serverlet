@@ -102,7 +102,7 @@
 	  <button type="submit" class="btn btn-primary">Login</button>
       
    </div>
-   <span> Chưa đăng ký, bấm vào<a class="link" href="file:///C:/Users/XuanVinh/Desktop/html/Register.html"> đây </a>để đăng ký.</span>
+   <span> Chưa đăng ký, bấm vào<a class="link" href="${pageContext.request.contextPath}/Register"> đây </a>để đăng ký.</span>
    
  
 </form>

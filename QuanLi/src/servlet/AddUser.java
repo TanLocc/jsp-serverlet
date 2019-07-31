@@ -1,15 +1,18 @@
 package servlet;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 import beans.UserAccount;
 import conn.ConnectionUtils;
@@ -19,6 +22,9 @@ import dao.UserDao;
  * Servlet implementation class AddUser
  */
 @WebServlet("/AddUser")
+@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 8, // 2MB
+maxFileSize = 1024 * 1024 * 10, // 10MB
+maxRequestSize = 1024 * 1024 * 50)
 public class AddUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -35,6 +41,7 @@ public class AddUser extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
 		 RequestDispatcher dispatcher //
          = this.getServletContext().getRequestDispatcher("/WEB-INF/views/adduser.jsp");
 
@@ -46,9 +53,18 @@ public class AddUser extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String userName = request.getParameter("username");
+		
+		   String userName = request.getParameter("username");
 		   String password = request.getParameter("password");
 		   String mail = request.getParameter("email");
+		   InputStream    avatar=null;
+		   for (Part part : request.getParts()) {
+			   avatar = part.getInputStream();
+          
+                   // Ghi vào file.
+                   
+               break;
+           }    
 		   
 		   UserAccount user = new UserAccount();
 	        @SuppressWarnings("unused")
@@ -66,6 +82,7 @@ public class AddUser extends HttpServlet {
 	                user.setUserName(userName);
 	                user.setPassword(password);
 	                user.setMail(mail);
+	                user.setAvatar(avatar);
 	                 i = UserDao.save(user, conn);
 	 
 	                if (i == 0) {

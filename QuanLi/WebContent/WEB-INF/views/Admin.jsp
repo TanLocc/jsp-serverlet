@@ -5,41 +5,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Admin Page </title>
 </head>
 <body>
 <h1 style ="color:blue">This is Admin's page</h1>
- <h3>User List</h3>
+
+<div style="padding: 5px;">
  
-    <p style="color: red;">${errorString}</p>
- 
-    <table border="1" cellpadding="5" cellspacing="1" >
-       <tr>
-          <th>ID</th>
-          <th>USERNAME</th>
-          <th>MAIL</th>
-          <th>PASSWORD</th>
-          <th>ROLE</th>
-          <th>EDIT</th>
-          <th>DELETE</th>
-       </tr>
-       <c:forEach items="${userList}" var="user" >
-          <tr>
-             <td>${user.id}</td>
-             <td>${user.userName}</td>
-             <td>${user.mail}</td>
-             <td>${user.password}</td>
-             <td>${user.role}</td>
-             <td>
-                <a href="EditUser?password=${user.password}">Edit</a>
-             </td>
-             <td>
-                <a href="deleteUser?password=${user.password}">Delete</a>
-             </td>
-          </tr>
-       </c:forEach>
-       
-    </table>
-    <a style="coler: green" href="${pageContext.request.contextPath}/AddUser">Add New User</a>
+   <a href="${pageContext.request.contextPath}/Admin">Home</a>
+   |
+   <a href="${pageContext.request.contextPath}/UserList">User List</a>
+   |
+   <a href="${pageContext.request.contextPath}/ProductList">Product List</a>
+    
+</div>  
+
+   
 </body>
 </html>

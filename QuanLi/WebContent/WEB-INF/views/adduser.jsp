@@ -11,15 +11,19 @@
 </head>  
 <body>  
 <p style="color: red;">${errorString}</p>  
-<a href="Admin.jsp">View All Records</a><br/>  
+<a href="adduser.jsp">View All Records</a><br/>  
   
 <h1>Add New User</h1>  
 <div align="center"> 
-<form method="POST" action="${pageContext.request.contextPath}/AddUser" accept-charset="utf-8" class="form-group" style="width:600px;margin: 0px auto;" id="formDemo">
+<form method="POST" enctype="multipart/form-data" action="${pageContext.request.contextPath}/AddUser" accept-charset="utf-8" class="form-group" style="width:600px;margin: 0px auto;" id="formDemo">
  
    <!-- Vertical -->
     <h4>Nhập thông tin new user</h4>
    <div class = "col-4" align="left" >
+     <div >
+				<label for="avatar">Avatar</label>
+				<input  name="avatar" id="avatar" type="file" class="form-control" placeholder="Vui lòng chọn ảnh" required>
+	 </div>
      <div>
       <label  for="username">Username</label>
       <input name="username" type="text" id = "username" class="form-control" placeholder="Username" required>

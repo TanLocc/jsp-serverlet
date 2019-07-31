@@ -54,6 +54,7 @@ public class UpdateImageToDB extends HttpServlet {
                String Name = extractFileName(part);
                if (Name != null && Name.length() > 0) {
                    // Dữ liệu file.
+            	   System.out.println("part1="+part);
                    InputStream is = part.getInputStream();
           
                    // Ghi vào file.

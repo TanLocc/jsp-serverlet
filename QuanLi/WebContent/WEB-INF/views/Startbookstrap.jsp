@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+ pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html>
    <head>
@@ -60,7 +63,7 @@
 		   </li >
 		   
 		   <li class="nav-item ">
-		    <a class="nav-link text-primary"   href="log-in.html">Log in</a>
+		    <a class="nav-link text-primary"   href="${pageContext.request.contextPath}/LogOut">LogOut</a>
 		   </li>	
 		   </ul>   
 		  </div> 		   
@@ -115,67 +118,40 @@
      <span class="sr-only">Next</span>
     </a>
    </div>
-   <h1 style="color: blue;">Hello: ${user.userName}, you logined success</h1>	
+   <% String name=(String)session.getAttribute("username");%>
+   <h1 style="color: blue;">Hello: <% out.print(name); %>, you logined success</h1>	
    <div class="bg-im">
 	<div class=" container-fluid w-75">
 	  <div >
 		<h4 class="mb-4 pt-4">Welcome to Modern Business</h4>
         <div class="card-deck">
-         <div class="card">
-           
-           <div class="card-body">
-             <h5 class="card-title">Card title</h5>
+        
+        <c:forEach items="${ProductList}" var="product" >
+        
+        <div  class="mb-4  col-6 col-sm-4 col-md-3 p-2">
+         <div  class="card h-100">
+          <img style="height:8rem" class=" w-100 card-img-top" src="${pageContext.request.contextPath}/ProductImage?id=${product.id}"/>
+           <div  class="card-body">
+             <h5 class="card-title">${product.name}</h5>
+            
              <p class="card-text">
-              This is a wider card with supporting text below
-              as a natural lead-in to additional content.
-              This content is a little bit longer.
+              ${product.des}
+              ${product.detail}
              </p>
+             <h5 class="card-title"><span>${product.price} $</span></h5>
              <p class="card-text">
               <small class="text-muted">Last updated 3 mins ago</small>
              </p>
            </div>
 		   <div  href="#" class="card-footer">
 		     <a href="#" class="btn btn-primary">
-              Lear More
+              BUY
 			 </a> 
            </div>
          </div>
-         <div class="card">
-          
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-             This card has supporting text below as a natural lead-in to additional content.
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
-		  <div  href="#" class="card-footer">
-		     <a href="#" class="btn btn-primary">
-              Lear More
-			 </a> 
-          </div>
          </div>
-           <div class="card">
-            
-            <div class="card-body">
-             <h5 class="card-title">Card title</h5>
-             <p class="card-text">
-              This is a wider card with supporting text
-              below as a natural lead-in to additional content.
-              This card has even longer content than the first to show that equal height action.
-             </p>
-             <p class="card-text">
-               <small class="text-muted">Last updated 3 mins ago</small>
-             </p>
-            </div>
-           <div  href="#" class="card-footer">
-		     <a href="#" class="btn btn-primary">
-              Lear More
-			 </a> 
-           </div>
-		   </div>   
+         </c:forEach>
+             
           </div>
 		</div>
 		
@@ -183,14 +159,14 @@
   <h5 class="mb-4">Portfolio Heading</h5>
   <div class="card-deck">
    <div class="card mb-4 " >
-      <img class="card-img-top" src="tải xuống.png" alt="">
+      <img class="card-img-top" src="táº£i xuá»ng.png" alt="">
       <div class="card-body">
          <h4 class="card-title text-primary">Project One</h4>
          <p class="card-text">Card Text 1..</p>
       </div>
    </div>
    <div class="card mb-4">
-      <img class="card-img-top" src="tải xuống.png" alt="">
+      <img class="card-img-top" src="táº£i xuá»ng.png" alt="">
       <div class="card-body">
          <h4 class="card-title text-primary">Project Two</h4>
          <p class="card-text">Card Text 2..</p>
@@ -200,7 +176,7 @@
       <!-- wrap every 2 on sm-->
    </div>
    <div class="card mb-4">
-      <img class="card-img-top" src="tải xuống.png" alt="">
+      <img class="card-img-top" src="táº£i xuá»ng.png" alt="">
       <div class="card-body">
          <h4 class="card-title text-primary">Project Three</h4>
          <p class="card-text">Card Text 3..</p>
@@ -210,7 +186,7 @@
       <!-- wrap every 3 on md-->
    </div>
    <div class="card mb-4">
-      <img class="card-img-top" src="tải xuống.png" alt="">
+      <img class="card-img-top" src="táº£i xuá»ng.png" alt="">
       <div class="card-body">
          <h4 class="card-title text-primary">Project Four</h4>
          <p class="card-text">Card Text 4..</p>
@@ -221,14 +197,14 @@
    </div>
  
    <div class="card mb-4">
-      <img class="card-img-top" src="tải xuống.png" alt="">
+      <img class="card-img-top" src="táº£i xuá»ng.png" alt="">
       <div class="card-body">
          <h4 class="card-title text-primary">Project Five</h4>
          <p class="card-text">Card Text 5..</p>
       </div>
    </div>
    <div class="card mb-4">
-      <img class="card-img-top" src="tải xuống.png" alt="">
+      <img class="card-img-top" src="táº£i xuá»ng.png" alt="">
       <div class="card-body">
          <h4 class="card-title text-primary">Project Six</h4>
          <p class="card-text">Card Text 6..</p>
