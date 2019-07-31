@@ -60,9 +60,7 @@ public class AddUser extends HttpServlet {
 		   InputStream    avatar=null;
 		   for (Part part : request.getParts()) {
 			   avatar = part.getInputStream();
-          
-                   // Ghi vào file.
-                   
+
                break;
            }    
 		   

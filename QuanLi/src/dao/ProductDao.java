@@ -39,7 +39,6 @@ public class ProductDao {
 		    ResultSet rs = pstm.executeQuery();
 		    List<Product> list = new ArrayList<Product>();
 		    while (rs.next()) {
-		    	System.out.println("product ="+rs.getString("name"));
 		        Product product = new Product();
 		        product.setId(rs.getInt("id"));
 		        product.setImage(rs.getAsciiStream("image"));

@@ -70,8 +70,7 @@ public class Login extends HttpServlet {
 	        conn = ConnectionUtils.getConnection();
 	        user = UserDao.findUser(conn, userName, password);
 	        request.setAttribute("user", user);
-	        HttpSession session = request.getSession();
-	        session.setAttribute("username", user.getUserName());
+	       
 	        if (user == null) {
                 hasError = true;
                 errorString = "User Name or password invalid";
@@ -92,7 +91,9 @@ public class Login extends HttpServlet {
 	                    = this.getServletContext().getRequestDispatcher("/WEB-INF/views/Login.jsp");
 	            dispatcher.forward(request, response);
 	        }
-	        else {  //
+	        else {  
+	        	HttpSession session = request.getSession();
+	            session.setAttribute("username", user.getUserName());
 	        	if(user.getRole()==1) {
 	        		
 	        		List<UserAccount> list = new ArrayList<UserAccount>(); 
