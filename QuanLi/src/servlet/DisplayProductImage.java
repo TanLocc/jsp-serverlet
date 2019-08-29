@@ -48,7 +48,7 @@ public class DisplayProductImage extends HttpServlet {
 	          byte[] imageData=null;
 	          try{  
 	  	        Connection con=ConnectionUtils.getConnection();  
-	  	        PreparedStatement ps=con.prepareStatement("select * from PRODUCT where id=?");  
+	  	        PreparedStatement ps=con.prepareStatement("select * from PRODUCT where product_id=?");  
 	  	        ps.setInt(1,id);  
 	  	        ResultSet rs=ps.executeQuery();  
 	  	        while(rs.next()){  

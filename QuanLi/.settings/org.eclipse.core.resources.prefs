@@ -1,10 +1,12 @@
 eclipse.preferences.version=1
 encoding//WebContent/WEB-INF/views/Login.jsp=UTF-8
-encoding//src/servlet/DeleteProduct.java=UTF-8
-encoding//src/servlet/DeleteUser.java=UTF-8
 encoding//src/servlet/DisplayProductImage.java=UTF-8
 encoding//src/servlet/DisplayUserImage.java=UTF-8
-encoding//src/servlet/EditProduct.java=UTF-8
-encoding//src/servlet/EditUser.java=UTF-8
 encoding//src/servlet/Login.java=UTF-8
 encoding//src/servlet/Register.java=UTF-8
+encoding//src/servlet/User/Admin/DeleteProduct.java=UTF-8
+encoding//src/servlet/User/Admin/DeleteUser.java=UTF-8
+encoding//src/servlet/User/Admin/EditProduct.java=UTF-8
+encoding//src/servlet/User/Admin/EditUser.java=UTF-8
+encoding//src/servlet/User/Customer/BadView.java=UTF-8
+encoding//src/servlet/User/Customer/UserInfor.java=UTF-8

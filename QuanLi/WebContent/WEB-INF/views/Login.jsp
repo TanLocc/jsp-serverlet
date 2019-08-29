@@ -23,55 +23,49 @@
 	 
   </head>
    <body >
-      <nav class="navbar fixed-top  navbar-expand-sm  bg-dark navbar-dark " id="myTab" role="tablist">
+     <nav class="navbar fixed-top  navbar-expand-sm  bg-dark navbar-dark " id="myTab" role="tablist">
  		         
-          <a class=" navbar-brand text-success active "  href="Startbookstrap.html" >Start bootstrap</a>
+          <a class=" navbar-brand text-success active "  href="${pageContext.request.contextPath}/UserView" >ShopShoes</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
 		 <div class="collapse   navbar-collapse " id="collapsibleNavbar">
 		 <div class= "ml-auto">
 		 <ul class="navbar-nav   text-primary ">          	   
-		  <li class="nav-item " >
-              <a class="nav-link "   href="About.html">About</a>
-           </li>
-           <li class="nav-item">
-              <a class="nav-link"  href="Services.html">Services</a>
-           </li>
+		 
 		   <li class="nav-item">
-              <a class="nav-link"   href="Contact.html">Contact</a>
+              <a class="nav-link"   href="${pageContext.request.contextPath}/Popular">Popular</a>
            </li>
 		   <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Portfolio</a>
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">ShoesType</a>
               <div class="dropdown-menu">
-                  <a class="dropdown-item" href="Portfolio 1.html">Portfolio 1</a>
-                  <a class="dropdown-item" href="#">Portfolio 2</a>
-                  <a class="dropdown-item" href="#">Portfolio 3</a>
+                  <a class="dropdown-item" href="${pageContext.request.contextPath}/FindProduct?text=the thao">Sport</a>
+                  <a class="dropdown-item" href="${pageContext.request.contextPath}/FindProduct?text=cong so">Office</a>
+                  <a class="dropdown-item" href="${pageContext.request.contextPath}/FindProduct?text=da ngoai">Picnic</a>
                </div>
 		   </li>
-		   <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Blog</a>
-              <div class="dropdown-menu">
-                  <a class="dropdown-item" href="Blog Home 1.html">Blog Home 1</a>
-                  <a class="dropdown-item" href="#">Blog Home 2</a>
-                  <a class="dropdown-item" href="#">Blog Home 3</a>
-               </div>
-		   </li>
-		   <li class="nav-item dropdown ">
-              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Other pages</a>
-              <div class="dropdown-menu">
-                  <a class="dropdown-item" href="Other page - Pricing.html">Pricing</a>
-                  <a class="dropdown-item" href="#">Sesion2</a>
-                  <a class="dropdown-item" href="#">Sesion3</a>
-               </div> 
-		   </li >
 		   
-		   <li class="nav-item ">
-		    <a class="nav-link text-primary"   href="Lo-gin.html"><u>Log in</u></a>
+		   
+		   <li class="nav-item">
+              <a class="nav-link"   href="${pageContext.request.contextPath}/BadView?id=0">ProductBad</a>
+		   </li>
+		   
+		   <li class="nav-item">
+		   <form method="post" action="${pageContext.request.contextPath}/FindProduct" class="input-group mb-3" >
+            <input type="text" name = "text"  class="form-control" placeholder="Search">
+             <div class="input-group-append">
+              <button class="btn btn-success" type="submit">Go</button>
+            </div>
+           </form>
+           </li>
+		   
+		   <li class="nav-item">
+		    <a class="nav-link text-primary"   href="${pageContext.request.contextPath}/Login">Login</a>
 		   </li>	
 		   </ul>   
 		  </div> 		   
           </div>
+  		  
   		  
 	   </nav>
 	    <h1>aaaa</h1> 

@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 import beans.UserAccount;
@@ -57,7 +58,9 @@ public class Register extends HttpServlet {
 		
 		   String userName = request.getParameter("username");
 		   String password = request.getParameter("password");
-		   String mail = request.getParameter("email");	  
+		   String mail = request.getParameter("email");	
+		   String phone = request.getParameter("phone");
+		   String address =request.getParameter("address");
 		   InputStream avatar=null;
 		  // avatar = request.getParameter("avatar");
 		   
@@ -93,9 +96,10 @@ public class Register extends HttpServlet {
 	                user.setUserName(userName);
 	                user.setPassword(password);
 	                user.setMail(mail);
+	                user.setPhone(phone);
+	                user.setAddress(address);
 	                
 	                 i = UserDao.save(user, conn);
-	 
 	                if (i == 0) {
 	                    hasError = true;
 	                    errorString = "User Name or password invalid";
@@ -112,6 +116,8 @@ public class Register extends HttpServlet {
 	        	request.setAttribute("errorString", errorString);
 		        
 	 		   if(i!=0) { 
+	 			  HttpSession session = request.getSession();
+		            session.setAttribute("User", user);
 	 			   RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/Startbookstrap.jsp");
             dispatcher.forward(request, response);	}
             else {
