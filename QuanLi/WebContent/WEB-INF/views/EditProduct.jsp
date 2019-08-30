@@ -31,20 +31,11 @@
               </div>
                <div>
                <label  for="cate">Category:</label>
-                <select id="cate" name="cate" class="form-control">
-                     <option selected>${product.cate}</option>
-                     <option>The thao</option>
-                     <option>Cong so</option>
-                     <option>Da ngoai</option>
-                </select>     
+              <input name="cate" type="text" id = "cate" class="form-control" value="${product.cate}" required>
               </div>
               <div>
               <label  for="price">Price:</label>
               <input name="price" type="text" id = "price" class="form-control" value="${product.price}" required>
-               </div>
-                <div>
-              <label  for="amount">Amount:</label>
-              <input name="amount" type="number" id = "amount" class="form-control" value="${product.amount}" required>
                </div>
                <div>	 
 	           <label for="des">Description:</label>

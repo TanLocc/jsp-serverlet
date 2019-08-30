@@ -52,7 +52,7 @@ public class DisplayUserImage extends HttpServlet {
           byte[] imageData=null;
           try{  
   	        Connection con=ConnectionUtils.getConnection();  
-  	        PreparedStatement ps=con.prepareStatement("select * from USERACCOUNT where user_id=?");  
+  	        PreparedStatement ps=con.prepareStatement("select * from USERACCOUNT where id=?");  
   	        ps.setInt(1,id);  
   	        ResultSet rs=ps.executeQuery();  
   	        while(rs.next()){  

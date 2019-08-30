@@ -93,7 +93,7 @@ public class Login extends HttpServlet {
 	        }
 	        else {  
 	        	HttpSession session = request.getSession();
-	        	session.setAttribute("User", user);
+	            session.setAttribute("username", user.getUserName());
 	        	if(user.getRole()==1) {
 	        		
 	        		List<UserAccount> list = new ArrayList<UserAccount>(); 

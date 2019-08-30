@@ -65,7 +65,7 @@
                </div> 
 		   </li>
 		   <li class="nav-item ">
-		    <a class="nav-link text-primary"   href="${pageContext.request.contextPath}/Login">Login</a>
+		    <a class="nav-link text-primary"   href="Lo-gin.html"><u>Register</u></a>
 		   </li>
 		   </ul>        		   	  			  
           </div>
@@ -94,17 +94,11 @@
 				<label for="username">UserName:</label>
 				<input name="username" type="text" id = "username" class="form-control" placeholder="Vui lòng nhập tên" required>
 			</div>
+			
+			
 			<div>
 				<label for="myEmail">Email</label>
 				<input name="email" type="text" id = "myEmail" class="form-control" placeholder="Vui lòng nhập Email" required>
-			</div>
-			<div>
-				<label for="phone">Phone</label>
-				<input name="phone" type="tel" id = "phone" class="form-control" placeholder="Vui lòng nhập SDT" required>
-			</div>
-			<div>
-				<label for="address">Address</label>
-				<input name="address" type="text" id = "address" class="form-control" placeholder="Vui lòng nhập địa chỉ" required>
 			</div>
 			<div>
 				<label for="password">Mật khẩu</label>
@@ -117,7 +111,9 @@
 			<div>
 				<label for="ConfiPassword">Nhập lại mật khẩu</label>
 				<input name="confirm_password" id="ConfiPassword" type="password" class="form-control" placeholder="Vui lòng nhập lại Password" required>
-			</div>			
+			</div>
+			
+			
 			<div>
 				<label for="DK">Điều khoản</label>
 				<input name="dieukhoan" id="DK"  type="checkbox">

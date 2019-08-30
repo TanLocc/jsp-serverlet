@@ -12,12 +12,10 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import beans.UserAccount;
-
 /**
  * Servlet Filter implementation class UserFilter
  */
-@WebFilter({"/UserFilter","/UserList","/ProductList","/OrderList","/Popular","/UserView","/Admin","/AddProduct","/BadView","/UserInfor","/OrderState","/AddUser","/DeleteUser","/DeleteProduct"})
+@WebFilter({"/UserFilter","/UserList","/ProductList","/Admin"})
 public class UserFilter implements Filter {
 
     /**
@@ -39,10 +37,8 @@ public class UserFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest httpReq = (HttpServletRequest) request;
-	    UserAccount user = new UserAccount();
 		HttpSession session = httpReq.getSession(false);
-		user = (UserAccount) session.getAttribute("User");
-		if(session !=null&&user!=null) {
+		if(session !=null&&session.getAttribute("username")!=null) {
 			chain.doFilter(request,response);
 		}else {
 			RequestDispatcher dispatcher = httpReq.getServletContext()

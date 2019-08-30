@@ -8,18 +8,16 @@ public class Product {
  private String name;
  private String cate;
  private float price;
- private int amount;
  private String des;
  private String detail;
  
-public Product(int id, InputStream image, String name,String cate, float price, int amount, String des, String detail) {
+public Product(int id, InputStream image, String name,String cate, float price, String des, String detail) {
 	super();
 	this.id = id;
 	this.image = image;
 	this.name = name;
 	this.cate =cate;
 	this.price = price;
-	this.amount = amount;
 	this.des = des;
 	this.detail = detail;
 }
@@ -52,15 +50,6 @@ public float getPrice() {
 public void setPrice(float price) {
 	this.price = price;
 }
-
-public int getAmount() {
-	return amount;
-}
-
-public void setAmount(int amount) {
-	this.amount = amount;
-}
-
 public String getDes() {
 	return des;
 }

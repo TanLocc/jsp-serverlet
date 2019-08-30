@@ -30,16 +30,7 @@
      </div>
       <div>
       <label  for="cate">Category</label>
-      <select id="cate" name="cate" class="form-control">
-                     <option selected>The thao</option>
-                     <option>Cong so</option>
-                     <option>Da ngoai</option>
-      </select>
-     </div>
-     
-      <div>
-      <label  for="amount">Amount</label>
-      <input name="amount" type="number" id = "amount" class="form-control" placeholder="amount" required>
+      <input name="cate" type="text" id = "cate" class="form-control" placeholder="Category" required>
      </div>
      <div>
       <label  for="price">Price</label>
@@ -51,8 +42,7 @@
      </div> 
      <div>	 
 	  <label for="detail">Detail</label>
-      
-      <textarea name="detail" id="detail" class="form-control" placeholder="Detail" rows="3" required></textarea>
+      <input name="detail" type="text" id="detail" class="form-control" placeholder="Detail" required>
      </div> 
 	  <button type="submit" class="btn btn-primary">AddProduct</button>
       

@@ -17,8 +17,6 @@
    <a href="${pageContext.request.contextPath}/UserList">User List</a>
    |
    <a href="${pageContext.request.contextPath}/ProductList">Product List</a>
-   |
-   <a href="${pageContext.request.contextPath}/OrderList">Order List</a>
     
 </div>  
 

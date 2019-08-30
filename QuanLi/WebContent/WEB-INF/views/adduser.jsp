@@ -29,16 +29,8 @@
       <input name="username" type="text" id = "username" class="form-control" placeholder="Username" required>
      </div>
      <div>
-      <label  for="phone">Phone</label>
-      <input name="phone" type="tel" id = "phone" class="form-control" placeholder=" Phone" required>
-     </div>
-     <div>
       <label  for="email">Email</label>
       <input name="email" type="email" id = "email" class="form-control" placeholder=" Email" required>
-     </div>
-     <div>
-      <label  for="address">Address</label>
-      <input name="address" type="text" id = "address" class="form-control" placeholder="Address" required>
      </div>
      <div>	 
 	  <label for="myPassword">Password</label>

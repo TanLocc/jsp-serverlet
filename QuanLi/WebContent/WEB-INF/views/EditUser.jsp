@@ -33,14 +33,6 @@
               <label  for="email">Email:</label>
               <input name="mail" type="email" id = "email" class="form-control" value="${user.mail}" required>
                </div>
-               <div>
-              <label  for="phone">Phone:</label>
-              <input name="phone" type="tel" id = "phone" class="form-control" value="${user.phone}" required>
-               </div>
-               <div>
-               <label  for="address">Address</label>
-              <input name="address" type="text" id = "address" class="form-control" value="${user.address}" required>
-              </div>
                <div>	 
 	           <label for="myPassword">Password:</label>
                <input  name="password" type="password" id="myPassword" class="form-control" value="${user.password}" required>

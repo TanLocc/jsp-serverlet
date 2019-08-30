@@ -11,68 +11,56 @@
     .bg-im{
 	    background-image: url(https://wikicachlam.com/wp-content/uploads/2018/05/hinh-nen-bien-6.jpg);
 		
-		}
-	
-    
-	 
-	 
+		}	 
 </style>	 
   </head>
    <body >
       <nav class="navbar fixed-top  navbar-expand-sm  bg-dark navbar-dark " id="myTab" role="tablist">
  		         
-          <a class=" navbar-brand text-success active "  href="Startbookstrap.html" >Start bootstrap</a>
+          <a class=" navbar-brand text-success active "  href="StartShoe.jsp" >Shop Shoes</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
 		 <div class="collapse   navbar-collapse " id="collapsibleNavbar">
 		 <div class= "ml-auto">
 		 <ul class="navbar-nav   text-primary ">          	   
-		  <li class="nav-item " >
-              <a class="nav-link "   href="About">About</a>
-           </li>
-           <li class="nav-item">
-              <a class="nav-link"  href="Service">Services</a>
-           </li>
+		 
 		   <li class="nav-item">
-              <a class="nav-link"   href="Contact">Contact</a>
+              <a class="nav-link"   href="Contact">Mua nhiều</a>
            </li>
 		   <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Portfolio</a>
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Loại Giày</a>
               <div class="dropdown-menu">
-                  <a class="dropdown-item" href="Portfolio 1.html">Portfolio 1</a>
-                  <a class="dropdown-item" href="#">Portfolio 2</a>
-                  <a class="dropdown-item" href="#">Portfolio 3</a>
+                  <a class="dropdown-item" href="Portfolio 1.html">Thể thao</a>
+                  <a class="dropdown-item" href="#">Công sở</a>
+                  <a class="dropdown-item" href="#">Dã ngoại</a>
                </div>
 		   </li>
-		   <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Blog</a>
-              <div class="dropdown-menu">
-                  <a class="dropdown-item" href="Blog Home 1.html">Blog Home 1</a>
-                  <a class="dropdown-item" href="#">Blog Home 2</a>
-                  <a class="dropdown-item" href="#">Blog Home 3</a>
-               </div>
-		   </li>
-		   <li class="nav-item dropdown ">
-              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Other pages</a>
-              <div class="dropdown-menu">
-                  <a class="dropdown-item" href="Other page - Pricing.html">Pricing</a>
-                  <a class="dropdown-item" href="#">Sesion2</a>
-                  <a class="dropdown-item" href="#">Sesion3</a>
-               </div> 
-		   </li >
 		   
+		   
+		   <li class="nav-item">
+              <a class="nav-link" method="POST"  href="${pageContext.request.contextPath}/BadView?id=0">Giỏ hàng</a>
 		   <li class="nav-item ">
+		   
+		   <li>
+		   <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search">
+             <div class="input-group-append">
+              <button class="btn btn-success" type="submit">Go</button>
+            </div>
+           </div>
+           </li>
+		   
+		   <li>
 		    <a class="nav-link text-primary"   href="${pageContext.request.contextPath}/LogOut">LogOut</a>
 		   </li>	
 		   </ul>   
 		  </div> 		   
           </div>
   		  
+  		  
 	   </nav>
-	      
 	   
-	    
          <div id="myCarousel" class="carousel slide border " data-ride="carousel">
 		    <ol class="carousel-indicators">
               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -81,7 +69,7 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                  <img class="d-block w-100 " src="https://images3.alphacoders.com/230/230465.png" alt="Panther" height ="400" >
+                  <img class="d-block w-100 " src="https://dacaocapcyvy.com.vn/uploads/images/news/giay-the-thao.jpg" alt="Panther" height ="600" >
                   <div class="carousel-caption">
                     <h5>GIRL 1</h5>
                     <small>
@@ -90,7 +78,7 @@
                   </div>
 			  </div>
                <div class="carousel-item">
-                  <img class="d-block w-100" src="http://i.imgur.com/7JjFPcK.jpg" alt="Black Cat"  height ="400">
+                  <img class="d-block w-100" src="http://s1.storage.5giay.vn/image/2016/11/20161110_5833138a073beec28c492a4fb6bf4ce6_1478792091.jpg" alt="Black Cat"  height ="600">
                    <div class="carousel-caption">
                     <h5>GIRL 2</h5>
                     <small>
@@ -99,7 +87,7 @@
                   </div>
 			   </div>
                <div class="carousel-item">
-                  <img class="d-block w-100" src="https://cdn.wallpapersafari.com/40/68/PTLekl.png" alt="Lion"  height ="400">
+                  <img class="d-block w-100" src="http://nguabac.com/wp-content/uploads/2017/10/giay-cong-so-nam-cao-cap-GB-008.jpg" alt="Lion"  height ="600">
                    <div class="carousel-caption">
                     <h5>GIRL 3</h5>
                     <small>
@@ -119,7 +107,7 @@
     </a>
    </div>
    <% String name=(String)session.getAttribute("username");%>
-   <h1 style="color: blue;">Hello: <% out.print(name); %>, you logined success</h1>	
+   <h1 style="color: blue;">Hello: ${User.userName}, you logined success</h1>	
    <div class="bg-im">
 	<div class=" container-fluid w-75">
 	  <div >
@@ -128,7 +116,7 @@
         
         <c:forEach items="${ProductList}" var="product" >
         
-        <div  class="mb-4  col-6 col-sm-4 col-md-3 p-2">
+        <div  class="mb-4  col-6 col-sm-6 col-md-4 p-2">
          <div  class="card h-100">
           <img style="height:8rem" class=" w-100 card-img-top" src="${pageContext.request.contextPath}/ProductImage?id=${product.id}"/>
            <div  class="card-body">
@@ -144,8 +132,9 @@
              </p>
            </div>
 		   <div  href="#" class="card-footer">
-		     <a href="#" class="btn btn-primary">
-              BUY
+		     <a href="BadView?id=${product.id}" class="btn btn-primary">
+              THÊM VÀO
+              GIỎ HÀNG
 			 </a> 
            </div>
          </div>
@@ -155,64 +144,7 @@
           </div>
 		</div>
 		
- <div >		
-  <h5 class="mb-4">Portfolio Heading</h5>
-  <div class="card-deck">
-   <div class="card mb-4 " >
-      <img class="card-img-top" src="táº£i xuá»ng.png" alt="">
-      <div class="card-body">
-         <h4 class="card-title text-primary">Project One</h4>
-         <p class="card-text">Card Text 1..</p>
-      </div>
-   </div>
-   <div class="card mb-4">
-      <img class="card-img-top" src="táº£i xuá»ng.png" alt="">
-      <div class="card-body">
-         <h4 class="card-title text-primary">Project Two</h4>
-         <p class="card-text">Card Text 2..</p>
-      </div>
-   </div>
-   <div class="w-100 d-none d-sm-block d-md-block d-lg-none">
-      <!-- wrap every 2 on sm-->
-   </div>
-   <div class="card mb-4">
-      <img class="card-img-top" src="táº£i xuá»ng.png" alt="">
-      <div class="card-body">
-         <h4 class="card-title text-primary">Project Three</h4>
-         <p class="card-text">Card Text 3..</p>
-      </div>
-   </div>
-   <div class="w-100 d-none d-lg-block d-xl-block">
-      <!-- wrap every 3 on md-->
-   </div>
-   <div class="card mb-4">
-      <img class="card-img-top" src="táº£i xuá»ng.png" alt="">
-      <div class="card-body">
-         <h4 class="card-title text-primary">Project Four</h4>
-         <p class="card-text">Card Text 4..</p>
-      </div>
-   </div>
-   <div class="w-100 d-none d-sm-block d-md-block d-lg-none">
-      <!-- wrap every 2 on sm-->
-   </div>
  
-   <div class="card mb-4">
-      <img class="card-img-top" src="táº£i xuá»ng.png" alt="">
-      <div class="card-body">
-         <h4 class="card-title text-primary">Project Five</h4>
-         <p class="card-text">Card Text 5..</p>
-      </div>
-   </div>
-   <div class="card mb-4">
-      <img class="card-img-top" src="táº£i xuá»ng.png" alt="">
-      <div class="card-body">
-         <h4 class="card-title text-primary">Project Six</h4>
-         <p class="card-text">Card Text 6..</p>
-      </div>
-   </div>
-   <div class="w-100 d-none d-sm-block d-md-block d-md-none">
-      <!-- wrap every 2 on sm-->
-   </div>
    <div class="w-100 d-none d-lg-block d-xl-block">
       <!-- wrap every 3 on md-->
    </div>
